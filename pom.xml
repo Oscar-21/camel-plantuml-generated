@@ -4,8 +4,8 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.github.ncasaux</groupId>
-  <artifactId>camel-plantuml</artifactId>
+  <groupId>io.github.oscar-21</groupId>
+  <artifactId>camel-plantuml-generated</artifactId>
   <packaging>pom</packaging>
   <version>1.8.0</version>
   <modules>
@@ -13,9 +13,9 @@
     <module>camel-plantuml-zip</module>
   </modules>
 
-  <name>A project to generate PlantUML diagrams from Camel routes</name>
-  <description>camel-plantuml allows to generate PlantUML diagrams from deployed Camel routes</description>
-  <url>https://github.com/ncasaux/camel-plantuml</url>
+  <name>A project to generate PlantUML diagrams from Camel routes that was forked from camel-plantuml</name>
+  <description>camel-plantuml-generated allows to generate PlantUML diagrams from deployed Camel routes</description>
+  <url>https://github.com/Oscar-21/camel-plantuml-generated</url>
 
   <licenses>
     <license>
@@ -27,20 +27,20 @@
 
   <developers>
     <developer>
-      <id>ncasaux</id>
-      <name>Nicolas Casaux</name>
-      <url>http://www.github.com/ncasaux</url>
-      <email>nicolas.casaux@outlook.com</email>
+      <id>Oscar-21</id>
+      <name>Austin Conder</name>
+      <url>http://www.github.com/Oscar-21</url>
+      <email>austin.conder@outlook.com</email>
     </developer>
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/ncasaux/camel-plantuml.git</connection>
-    <developerConnection>scm:git:ssh://github.com/ncasaux/camel-plantuml.git</developerConnection>
-    <url>https://github.com/ncasaux/camel-plantuml.git</url>
+    <connection>scm:git:git://github.com/Oscar-21/camel-plantuml-generated.git</connection>
+    <developerConnection>scm:git:ssh://github.com/Oscar-21/camel-plantuml-generated.git</developerConnection>
+    <url>https://github.com/Oscar-21/camel-plantuml-generated.git</url>
   </scm>
 
-  <distributionManagement>
+  <!-- <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
@@ -49,7 +49,7 @@
       <id>ossrh</id>
       <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
-  </distributionManagement>
+  </distributionManagement> -->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

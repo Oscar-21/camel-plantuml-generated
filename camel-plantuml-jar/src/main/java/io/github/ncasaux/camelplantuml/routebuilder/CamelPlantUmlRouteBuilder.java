@@ -16,6 +16,7 @@ public class CamelPlantUmlRouteBuilder extends EndpointRouteBuilder {
 
     private Integer port = 8090;
     private String host = "localhost";
+    private String restDslComponent = "netty-http";
     private final String jmxHost = System.getProperty("jmxHost");
 
     /**
@@ -35,6 +36,20 @@ public class CamelPlantUmlRouteBuilder extends EndpointRouteBuilder {
         this.host = host;
     }
 
+    /**
+     * Creates a Camel RouteBuilder for camel-plantuml using
+     * specified host, port, and restdsl component for the HTTP endpoint
+     *
+     * @param host Host of the HTTP endpoint of camel-plantuml-generated
+     * @param port Port of the HTTP endpoint of camel-plantuml-generated
+     * @param port Port of the HTTP endpoint of camel-plantuml-generated
+     */
+    public CamelPlantUmlRouteBuilder(String host, Integer port, String restDslComponent) {
+        this.port = port;
+        this.host = host;
+        this.restDslComponent = restDslComponent;
+    }
+
     public void configure() throws IOException {
 
         if (jmxHost != null) {
@@ -45,7 +60,7 @@ public class CamelPlantUmlRouteBuilder extends EndpointRouteBuilder {
             LOGGER.info("MBean server connection successfully tested");
         }
 
-        restConfiguration().component("netty-http").host(host).port(port);
+        restConfiguration().component(restDslComponent).host(host).port(port);
 
         rest("camel-plantuml")
                 .get("diagram.puml")
